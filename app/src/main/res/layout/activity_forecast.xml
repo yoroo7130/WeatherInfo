@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    tools:context=".Forecast">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"
+        android:textColor="#F6F6F6"
+        android:text="일기예보" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:columnCount="5"
+                        app:rowCount="2"
+                        app:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/init_weather"
+                            app:layout_rowSpan="2" />
+
+                        <TextView
+                            android:id="@+id/Date1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="날짜"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Temp1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="온도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Humidity1"
+                            android:layout_marginTop="10dp"
+                            android:text="습도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Wind1"
+                            android:layout_marginTop="10dp"
+                            android:text="바람"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvDate1"
+                            android:layout_marginRight="10dp"
+                            android:text="일"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTemp1"
+                            android:layout_marginRight="10dp"
+                            android:text="℃"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity1"
+                            android:text="%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvWind1"
+                            android:text="m/s"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:columnCount="5"
+                        app:rowCount="2"
+                        app:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/init_weather"
+                            app:layout_rowSpan="2" />
+
+                        <TextView
+                            android:id="@+id/Date2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="날짜"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Temp2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="온도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Humidity2"
+                            android:layout_marginTop="10dp"
+                            android:text="습도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Wind2"
+                            android:layout_marginTop="10dp"
+                            android:text="바람"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvDate2"
+                            android:layout_marginRight="10dp"
+                            android:text="일"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTemp2"
+                            android:layout_marginRight="10dp"
+                            android:text="℃"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity2"
+                            android:text="%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvWind2"
+                            android:text="m/s"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" >
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:columnCount="5"
+                        app:orientation="horizontal"
+                        app:rowCount="2">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/init_weather"
+                            app:layout_rowSpan="2" />
+
+                        <TextView
+                            android:id="@+id/Date3"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="날짜"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Temp3"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="온도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Humidity3"
+                            android:layout_marginTop="10dp"
+                            android:text="습도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Wind3"
+                            android:layout_marginTop="10dp"
+                            android:text="바람"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvDate3"
+                            android:layout_marginRight="10dp"
+                            android:text="일"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTemp3"
+                            android:layout_marginRight="10dp"
+                            android:text="℃"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity3"
+                            android:text="%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvWind3"
+                            android:text="m/s"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" >
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:columnCount="5"
+                        app:orientation="horizontal"
+                        app:rowCount="2">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/init_weather"
+                            app:layout_rowSpan="2" />
+
+                        <TextView
+                            android:id="@+id/Date4"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="날짜"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Temp4"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="온도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Humidity4"
+                            android:layout_marginTop="10dp"
+                            android:text="습도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Wind4"
+                            android:layout_marginTop="10dp"
+                            android:text="바람"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvDate4"
+                            android:layout_marginRight="10dp"
+                            android:text="일"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTemp4"
+                            android:layout_marginRight="10dp"
+                            android:text="℃"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity4"
+                            android:text="%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvWind4"
+                            android:text="m/s"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" >
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:columnCount="5"
+                        app:orientation="horizontal"
+                        app:rowCount="2">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/init_weather"
+                            app:layout_rowSpan="2" />
+
+                        <TextView
+                            android:id="@+id/Date5"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="날짜"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Temp5"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="온도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Humidity5"
+                            android:layout_marginTop="10dp"
+                            android:text="습도"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/Wind5"
+                            android:layout_marginTop="10dp"
+                            android:text="바람"
+                            android:textColor="#F6F6F6"
+                            android:textSize="20dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvDate5"
+                            android:layout_marginRight="10dp"
+                            android:text="일"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvTemp5"
+                            android:layout_marginRight="10dp"
+                            android:text="℃"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity5"
+                            android:text="%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvWind5"
+                            android:text="m/s"
+                            android:textColor="#BDBDBD"
+                            android:textSize="15dp"
+                            app:layout_gravity="center" />
+
+                    </androidx.gridlayout.widget.GridLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="@color/bg"
+            android:onClick="btnBack"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
